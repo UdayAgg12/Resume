@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Resume and Portfolio of Uday Aggarwal - MERN Stack Developer & Computer Science Engineer.">
+  <title>Uday Aggarwal | Resume & Interactive Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Controls Panel (Hidden in Print) -->
+  <header class="app-header no-print">
+    <div class="logo-area">
+      <div class="logo-icon"><i class="fa-solid fa-file-invoice"></i></div>
+      <span class="logo-text">RESUME<span>CRAFT</span></span>
+    </div>
+    
+    <div class="header-controls">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      
+      <!-- Customize Panel Toggle -->
+      <button id="customize-toggle" class="control-btn" title="Customize Layout">
+        <i class="fa-solid fa-sliders"></i>
+      </button>
+      
+      <!-- Print Button -->
+      <button id="print-btn" class="btn btn-primary">
+        <i class="fa-solid fa-print"></i> Print / Save PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- Sidebar Customizer Panel (Hidden in Print) -->
+  <aside id="customizer-panel" class="customizer-panel no-print closed">
+    <div class="panel-header">
+      <h3><i class="fa-solid fa-gears"></i> Customize Resume</h3>
+      <button id="panel-close" class="close-btn">&times;</button>
+    </div>
+    
+    <div class="panel-section">
+      <h4>Print Layout Settings</h4>
+      <div class="toggle-option">
+        <label for="toggle-photo">Include Photo</label>
+        <input type="checkbox" id="toggle-photo" checked>
+      </div>
+      <div class="toggle-option">
+        <label for="toggle-summary">Include Summary</label>
+        <input type="checkbox" id="toggle-summary" checked>
+      </div>
+      <div class="toggle-option">
+        <label for="toggle-certs">Include Certifications</label>
+        <input type="checkbox" id="toggle-certs" checked>
+      </div>
+      <div class="toggle-option">
+        <label for="toggle-achievements">Include Achievements</label>
+        <input type="checkbox" id="toggle-achievements" checked>
+      </div>
+      <div class="toggle-option">
+        <label for="toggle-activities">Include Extra-curricular</label>
+        <input type="checkbox" id="toggle-activities" checked>
+      </div>
+    </div>
+
+    <div class="panel-section">
+      <h4>Print Styling Style</h4>
+      <div class="style-selector">
+        <button class="style-btn active" data-style="modern">
+          <span class="color-dot modern"></span> Modern Grid
+        </button>
+        <button class="style-btn" data-style="classic">
+          <span class="color-dot classic"></span> Classic Formal
+        </button>
+        <button class="style-btn" data-style="minimal">
+          <span class="color-dot minimal"></span> Minimalist
+        </button>
+      </div>
+    </div>
+    
+    <div class="panel-info">
+      <p><i class="fa-solid fa-circle-info"></i> <strong>Tip:</strong> You can click on skills to highlight projects that use them!</p>
+    </div>
+  </aside>
+
+  <!-- Resume Container -->
+  <main class="resume-wrapper">
+    
+    <!-- Hero / Header Section -->
+    <section class="resume-hero" id="section-hero">
+      <div class="hero-content">
+        <!-- Photo Container -->
+        <div class="photo-container" id="photo-block">
+          <div class="photo-wrapper">
+            <img src="photo.jpg" alt="Uday Aggarwal" class="profile-photo">
+          </div>
+        </div>
+        
+        <div class="title-details">
+          <h1 class="user-name">UDAY AGGARWAL</h1>
+          <p class="user-title">Aspiring Computer Science Engineer | MERN Stack Developer | DSA Enthusiast</p>
+          
+          <!-- Contact Grid -->
+          <div class="contact-grid">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span>Pillibangan, Hanumangarh, Rajasthan, 335803</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <a href="tel:+919001284680">+91 9001284680</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <a href="mailto:2320211.cse.coe@cgc.edu.in">2320211.cse.coe@cgc.edu.in</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-linkedin contact-icon"></i>
+              <a href="https://linkedin.com/in/uday-aggarwal-53a7a31ab" target="_blank" rel="noopener noreferrer">linkedin.com/in/uday-aggarwal-53a7a31ab</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-github contact-icon"></i>
+              <a href="https://github.com/u2344ws" target="_blank" rel="noopener noreferrer">github.com/u2344ws</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section class="resume-section printable-section" id="section-summary">
+      <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
+      <div class="section-content summary-text">
+        <p>
+          Dynamic and goal-oriented third-year Computer Science Engineering student with hands-on expertise in C, C++, HTML, and CSS, and growing proficiency in Java, the MERN stack, and Data Structures & Algorithms. Skilled in building full-stack web applications with a focus on responsive UI, secure authentication, and practical real-world use cases. Eager to contribute to challenging opportunities that drive both personal and professional growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Resume Grid Layout -->
+    <div class="resume-grid">
+      
+      <!-- LEFT COLUMN -->
+      <div class="grid-column left-column">
+        
+        <!-- Technical Skills -->
+        <section class="resume-section" id="section-skills">
+          <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Skills</h2>
+          <div class="section-content skills-container">
+            
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="c">C</span>
+                <span class="skill-tag" data-skill="cpp">C++</span>
+                <span class="skill-tag" data-skill="html">HTML</span>
+                <span class="skill-tag" data-skill="css">CSS</span>
+                <span class="skill-tag" data-skill="javascript">JavaScript <small>(Learning)</small></span>
+                <span class="skill-tag" data-skill="java">Java <small>(In Progress)</small></span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Web Development</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="mongodb">MongoDB</span>
+                <span class="skill-tag" data-skill="express">Express.js</span>
+                <span class="skill-tag" data-skill="react">React.js</span>
+                <span class="skill-tag" data-skill="nodejs">Node.js</span>
+                <span class="skill-tag" data-skill="mern">MERN Stack</span>
+                <span class="skill-tag" data-skill="tailwind">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Database Management</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="mongodb">MongoDB</span>
+                <span class="skill-tag" data-skill="firebase">Firebase</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Tools & Platforms</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="git">Git</span>
+                <span class="skill-tag" data-skill="github">GitHub</span>
+                <span class="skill-tag" data-skill="vscode">VS Code</span>
+                <span class="skill-tag" data-skill="aws">AWS</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Operating System</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="windows">Windows</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Core Concepts</h3>
+              <div class="skill-tags">
+                <span class="skill-tag" data-skill="dsa">Data Structures & Algorithms (DSA)</span>
+                <span class="skill-tag" data-skill="prompt">Prompt Engineering</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-section printable-section" id="section-certs">
+          <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Certifications</h2>
+          <div class="section-content">
+            <ul class="certs-list">
+              <li>
+                <div class="cert-marker"></div>
+                <div class="cert-details">
+                  <h4>DSA Bootcamp</h4>
+                  <span class="cert-meta">by Love Babbar, Code-Help &bull; June 2025</span>
+                </div>
+              </li>
+              <li>
+                <div class="cert-marker"></div>
+                <div class="cert-details">
+                  <h4>MERN Stack Development</h4>
+                  <span class="cert-meta">4-week training at Think-Next, Chandigarh &bull; June 2025</span>
+                </div>
+              </li>
+              <li>
+                <div class="cert-marker"></div>
+                <div class="cert-details">
+                  <h4>AWS Academy Graduate</h4>
+                  <span class="cert-meta">AWS Academy Cloud Operations &bull; Feb 2025</span>
+                </div>
+              </li>
+              <li>
+                <div class="cert-marker"></div>
+                <div class="cert-details">
+                  <h4>Prompt Engineering</h4>
+                  <span class="cert-meta">Infosys Springboard &bull; Sept 2025</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Interpersonal Skills -->
+        <section class="resume-section" id="section-interpersonal">
+          <h2 class="section-title"><i class="fa-solid fa-people-arrows"></i> Interpersonal Skills</h2>
+          <div class="section-content">
+            <div class="interpersonal-skills">
+              <span class="interpersonal-tag">Leadership</span>
+              <span class="interpersonal-tag">Team-Work</span>
+              <span class="interpersonal-tag">Decision Making</span>
+              <span class="interpersonal-tag">Active Listening</span>
+              <span class="interpersonal-tag">Adaptability</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="resume-section" id="section-additional">
+          <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> Additional Info</h2>
+          <div class="section-content info-list">
+            <div class="info-item">
+              <strong>Languages:</strong>
+              <span>English, Hindi</span>
+            </div>
+            <div class="info-item">
+              <strong>Interests:</strong>
+              <span>Playing Guitar, Music, Sketching</span>
+            </div>
+            <div class="info-item">
+              <strong>Date of Birth:</strong>
+              <span>17 November 2004</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="grid-column right-column">
+        
+        <!-- Education -->
+        <section class="resume-section" id="section-education">
+          <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+          <div class="section-content timeline">
+            
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Bachelor of Technology – Computer Science Engineering</h3>
+                  <span class="timeline-date">2023 &ndash; 2027</span>
+                </div>
+                <div class="timeline-body">
+                  <p class="institution">Chandigarh Group of Colleges, Landran</p>
+                  <p class="score"><strong>CGPA:</strong> 7.57 (current)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Intermediate (CBSE Board)</h3>
+                  <span class="timeline-date">2022 &ndash; 2023</span>
+                </div>
+                <div class="timeline-body">
+                  <p class="institution">Genius Little Flower Public School</p>
+                  <p class="score"><strong>Percentage:</strong> 77.2%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-badge"></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h3 class="timeline-title">Matriculation (CBSE Board)</h3>
+                  <span class="timeline-date">2020 &ndash; 2021</span>
+                </div>
+                <div class="timeline-body">
+                  <p class="institution">Genius Little Flower Public School</p>
+                  <p class="score"><strong>Percentage:</strong> 86%</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Training & Projects -->
+        <section class="resume-section" id="section-projects">
+          <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Training & Projects</h2>
+          <div class="section-content projects-container">
+            
+            <!-- Project 1 -->
+            <div class="project-card" data-skills="mongodb express react nodejs mern">
+              <div class="project-header">
+                <div class="project-title-area">
+                  <h3 class="project-name">Destino &ndash; Doctor Finder Web App</h3>
+                  <div class="project-meta">Team Size: 4 &bull; Duration: 4 Weeks</div>
+                </div>
+                <span class="tech-badge">MERN Stack</span>
+              </div>
+              <div class="project-tech-detail">
+                <strong>Technologies Used:</strong> MongoDB, Express.js, React.js, Node.js
+              </div>
+              <ul class="project-highlights">
+                <li>Built a full-stack MERN application enabling users to search for doctors by specialty and location.</li>
+                <li>Implemented secure login, an admin panel, and complete CRUD functionality for managing records.</li>
+                <li>Focused on responsive UI design, protected routes, and a practical healthcare-oriented use case.</li>
+              </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-skills="mongodb express react nodejs mern tailwind">
+              <div class="project-header">
+                <div class="project-title-area">
+                  <h3 class="project-name">Edify &ndash; Event Management Platform</h3>
+                  <div class="project-meta">Duration: 4 Weeks</div>
+                </div>
+                <span class="tech-badge">MERN & Tailwind</span>
+              </div>
+              <div class="project-tech-detail">
+                <strong>Technologies Used:</strong> MongoDB, Express.js, React.js, Node.js, Tailwind CSS
+              </div>
+              <ul class="project-highlights">
+                <li>Developed a web app for managing and attending events, allowing users to browse, register, and track events.</li>
+                <li>Enabled organizers to create events and manage registrations through a dedicated dashboard.</li>
+                <li>Integrated ticket management and QR code scanning features with a fully responsive UI.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Academic Achievements -->
+        <section class="resume-section printable-section" id="section-achievements">
+          <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Academic Achievements</h2>
+          <div class="section-content">
+            <ul class="achievements-list">
+              <li>
+                <i class="fa-solid fa-medal achievement-icon"></i>
+                <div class="achievement-text">
+                  <strong>Secured 2nd position</strong> in &ldquo;Eureka! Pitching Competition 2024&rdquo; by presenting an original idea as part of a team.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-award achievement-icon"></i>
+                <div class="achievement-text">
+                  <strong>Finalist</strong> at college-level Hackathon, 2023 & 2024 (Smart India Hackathon &ndash; Internal Round).
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-star achievement-icon"></i>
+                <div class="achievement-text">
+                  <strong>Active participant</strong> in college-level technical events, workshops, and hackathons.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Extra-Curricular Activities -->
+        <section class="resume-section printable-section" id="section-activities">
+          <h2 class="section-title"><i class="fa-solid fa-puzzle-piece"></i> Extra & Co-Curricular</h2>
+          <div class="section-content">
+            <ul class="activities-list">
+              <li>
+                <i class="fa-solid fa-check activity-icon"></i>
+                <span>Active IEEE member and coordinator for the YESIST12 2026 technical event.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check activity-icon"></i>
+                <span>Participated in an intra-college Bug-Hunting event.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check activity-icon"></i>
+                <span>Participated in &ldquo;Eureka! Pitching Competition 2024&rdquo;.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer (Hidden in Print) -->
+  <footer class="app-footer no-print">
+    <p>&copy; 2026 Uday Aggarwal. Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i>. Print to PDF to save.</p>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
